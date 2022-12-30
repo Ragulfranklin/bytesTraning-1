@@ -1,0 +1,21 @@
+void swap(int a,int b){
+    int temp=a;
+    a=b;
+    b=temp;
+}
+void sortColors(int* arr, int n){
+int zi=0,zt=n;
+for(int i=0;i&lt;n;i++){
+    if(arr[i]==0){
+      swap(arr[i],arr[zi]);
+      zi++;
+    }
+    else if(arr[i]==1){
+        i++;
+    }
+    else if(arr[i]==2){
+        swap(arr[i],arr[zt]);
+        zt--;
+    }
+}
+}
